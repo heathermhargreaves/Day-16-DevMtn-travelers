@@ -24,5 +24,17 @@ angular.module('devmtnTravel').service('mainSrv', function(){
         price: 1112
 
 
-    }]
-})
+    }];
+
+
+    this.getLocation = function(id) {
+      for(var i = 0; i < this.travelInfo.length; i++) {
+        if(this.travelInfo[i] === id) {
+          return this.travelInfo[i];
+        }
+      }
+    };
+
+
+
+}); //end service
